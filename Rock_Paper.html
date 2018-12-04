@@ -1,0 +1,41 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Rock Paper Scissors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+</head>
+<body>
+<!--Text for game-->    
+<p>you choose- <span id ="playerpick"></span></p> 
+<p>The computer chose <span id= "computer"></span></p>
+
+
+</body>
+
+<script type="text/javascript">
+
+/*Logic */   
+
+var pick
+var playerwin
+var computerwin
+var draw
+
+
+document.onkeyup = function(event) {
+    pick = event.key
+    
+};
+
+var computerChoice= ['r','s','p'] 
+var computer = computerChoice[Math.floor(Math.random()*computerChoice.length)];  
+
+document.getElementById("playerpick").innerHTML= pick
+document.getElementById("computer").innerHTML= computer
+
+</script>
+</html>
